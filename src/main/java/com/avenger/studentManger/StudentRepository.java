@@ -1,5 +1,6 @@
 package com.avenger.studentManger;
 
+
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,7 +34,7 @@ public class StudentRepository {
     public String updateStudent(int id, int age){
 
         if(!db.containsKey(id)){
-            return "Invalid Id";
+            return null;
         }
         db.get(id).setAge(20);
         return "Age updated succesfully";
